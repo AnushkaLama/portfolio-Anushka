@@ -13,7 +13,7 @@ body {
     padding: 20px;
 }
 
-/* HEADER */
+
 header {
     text-align: center;
     padding: 30px 0;
@@ -23,7 +23,7 @@ header {
     border-bottom: 2px solid #2e2e33;
 }
 
-/* NAVIGATION */
+
 nav ul {
     list-style: none;
     display: flex;
@@ -44,7 +44,7 @@ nav a:hover {
     color: #b30045;
 }
 
-/* MAIN CONTENT SECTIONS */
+
 section {
     background: #141416;
     padding: 20px;
@@ -114,7 +114,6 @@ footer {
     border-radius: 6px;
 }
 
-
 .proj {
     display: flex;
     gap: 20px;
@@ -132,7 +131,20 @@ footer {
     color: #dcdcdc;
 }
 
-
+img{
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
 a.hover {
     color: #b30045;
+}
+
+
+.project1:hover, .project2:hover, .project3:hover{
+h3{
+    color: rgb(80, 2, 2);
+}
+  background-color: #c0c0c0;
 }
