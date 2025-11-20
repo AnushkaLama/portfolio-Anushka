@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth; /*babal smooth scroll hunxa nav ma thichda */
 }
 
 
@@ -11,6 +12,7 @@ body {
     background: #0b0b0d;
     color: #e5e5e5;
     padding: 20px;
+    text-align: center;
 }
 
 
@@ -19,11 +21,15 @@ header {
     padding: 30px 0;
     background: #151518;
     color: #b30045;
-    margin-bottom: 20px;
     border-bottom: 2px solid #2e2e33;
 }
 
-
+nav{
+    top: 0;
+    position:sticky;
+    z-index: 999;
+    width: 100%;
+}
 nav ul {
     list-style: none;
     display: flex;
@@ -52,12 +58,6 @@ section {
     border-radius: 6px;
     border: 1px solid #2a2a2e;
     color: #e5e5e5;
-}
-
-#about p {
-    font-size: 1.2rem;
-    text-align: center;
-    margin-top: 10px;
 }
 
 
@@ -98,13 +98,17 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 button:hover {
     background: #e6005e;
+    box-shadow: 0 4px 8px rgba(227, 86, 145, 0.3);
 }
 
-
+h2{
+    margin-bottom: 30px;
+}
 footer {
     text-align: center;
     padding: 15px;
@@ -113,7 +117,12 @@ footer {
     color: #888;
     border-radius: 6px;
 }
-
+#about p{
+    margin-top: 30px;
+    font-size: 30px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
 .proj {
     display: flex;
     gap: 20px;
@@ -123,12 +132,23 @@ footer {
 }
 
 .project1, .project2, .project3 {
+    margin: 20px 0 20px 0;
+    height: auto;
     background-color: #1a1a1d;
     padding: 15px;
-    border-radius: 6px;
+    border-radius: 20px;
     flex: 1;
     border: 1px solid #2a2a2e;
     color: #dcdcdc;
+    transition: background-color ease 0.3s, box-shadow ease 0.3s;
+    p{
+        font-size: 16px;
+        font-weight: bold;
+        padding: 0px 30px 0px 30px;
+    }
+    h3{
+        transition: font-size ease 0.3s;
+    }
 }
 
 img{
@@ -140,11 +160,31 @@ img{
 a.hover {
     color: #b30045;
 }
-
+h3{
+    margin-bottom: 15px;
+}
 
 .project1:hover, .project2:hover, .project3:hover{
-h3{
-    color: rgb(80, 2, 2);
+  background-color: #70022c;
+  box-shadow: wheat 0px 2px 2px 0px;
+  img{
+    transform: scale(1.1);
+    border: #d900ff 5px solid;
+  }
+  h3{
+    font-size: 25px;
+  }
 }
-  background-color: #c0c0c0;
+.project1 img, .project2 img, .project3 img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50px;
+    border: #ff0000 5px solid;
+    margin-bottom: 35px;
+    transition: transform ease 0.3s;
+}
+label{
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
 }
